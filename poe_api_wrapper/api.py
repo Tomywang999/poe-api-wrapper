@@ -4,7 +4,7 @@ from requests_toolbelt import MultipartEncoder
 import os, secrets, string, random, websocket, orjson, threading, queue, ssl, hashlib, re
 from loguru import logger
 from typing import Generator
-from poe_api_wrapper.utils import (
+from .utils import (
                     BASE_URL,
                     HEADERS,
                     SubscriptionsMutation,
@@ -14,11 +14,11 @@ from poe_api_wrapper.utils import (
                     generate_nonce, 
                     generate_file
                     )
-from poe_api_wrapper.queries import generate_payload
-from poe_api_wrapper.bundles import PoeBundle
-from poe_api_wrapper.proxies import PROXY
+from .queries import generate_payload
+from .bundles import PoeBundle
+from .proxies import PROXY
 if PROXY:
-    from poe_api_wrapper.proxies import fetch_proxy
+    from .proxies import fetch_proxy
 
 """
 This API is modified and maintained by @snowby666

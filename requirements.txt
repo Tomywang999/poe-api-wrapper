@@ -1,0 +1,4 @@
+nltk
+tiktoken
+poe-api-wrapper[llm]
+fastapi
